@@ -1,0 +1,102 @@
+{
+  "train_rows": 125973,
+  "test_rows": 22544,
+  "best_binary_model": "random_forest",
+  "binary_results": [
+    {
+      "model": "random_forest",
+      "accuracy": 0.7755056777856636,
+      "macro_f1": 0.774635315265664,
+      "weighted_f1": 0.7726957922196691
+    },
+    {
+      "model": "logistic_pca",
+      "accuracy": 0.7448101490418737,
+      "macro_f1": 0.7440569073052243,
+      "weighted_f1": 0.7421340776226251
+    },
+    {
+      "model": "gaussian_nb_pca",
+      "accuracy": 0.5016855926188787,
+      "macro_f1": 0.4201432350474224,
+      "weighted_f1": 0.45025622775360724
+    },
+    {
+      "model": "dummy_majority",
+      "accuracy": 0.43075762952448543,
+      "macro_f1": 0.3010696016121532,
+      "weighted_f1": 0.2593760558246646
+    }
+  ],
+  "statistical_summary": {
+    "normal_count": 67343,
+    "attack_count": 58630,
+    "mean_log_src_bytes_normal": 5.259490661806021,
+    "mean_log_src_bytes_attack": 0.8981950465418537,
+    "clt_shapiro_w": 0.9977441978829799,
+    "clt_shapiro_p": 0.19130534971190966,
+    "mann_whitney_u": 3548423374.0,
+    "mann_whitney_p": 0.0,
+    "welch_t": 373.48277860565935,
+    "welch_p": 0.0,
+    "bootstrap_mean_diff_attack_minus_normal_low": -4.536394385451957,
+    "bootstrap_mean_diff_attack_minus_normal_high": -4.172233406021796
+  },
+  "end_to_end_metrics": {
+    "accuracy": 0.7625532292405962,
+    "macro_f1": 0.4268642523645223,
+    "weighted_f1": 0.7206882864786871,
+    "classification_report": "              precision    recall  f1-score   support\n\n      normal       0.66      0.97      0.79      9711\n         DoS       0.96      0.80      0.87      7460\n       Probe       0.84      0.70      0.76      2421\n         R2L       0.97      0.04      0.08      2885\n         U2R       0.40      0.03      0.06        67\n       Other       0.00      0.00      0.00         0\n\n    accuracy                           0.76     22544\n   macro avg       0.64      0.42      0.43     22544\nweighted avg       0.82      0.76      0.72     22544\n",
+    "confusion_matrix": [
+      [
+        9442,
+        67,
+        201,
+        0,
+        1,
+        0
+      ],
+      [
+        1418,
+        5933,
+        109,
+        0,
+        0,
+        0
+      ],
+      [
+        571,
+        164,
+        1686,
+        0,
+        0,
+        0
+      ],
+      [
+        2742,
+        0,
+        13,
+        128,
+        2,
+        0
+      ],
+      [
+        61,
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "artifact_note": "Included default artifact may be a quick-run artifact. Re-run full training for final results."
+}
